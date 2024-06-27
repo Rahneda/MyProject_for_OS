@@ -1,1 +1,11 @@
-[Unit]Description=My Server ServiceAfter=network.target[Service]Environment=LD_LIBRARY_PATH=/home/vboxuser/FinalWork/MyProject_for_OS/my_project/srcExecStart=/home/vboxuser/FinalWork/MyProject_for_OS/my_project/src/serverRestart=on-failure[Install]WantedBy=multi-user.target
+[Unit]
+Description=My Server Service
+After=network.target
+
+[Service]
+Environment=LD_LIBRARY_PATH=/home/vboxuser/FinalWork/MyProject_for_OS/my_project/src
+ExecStart=/home/vboxuser/FinalWork/MyProject_for_OS/my_project/src/server
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
